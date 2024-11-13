@@ -1,0 +1,83 @@
+.add-exercise-overlay {
+  @apply fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50 backdrop-blur-sm;
+}
+
+.add-exercise-modal {
+  @apply bg-gray-900 rounded-xl shadow-lg w-full max-w-2xl max-h-[90vh] overflow-hidden;
+}
+
+.add-exercise-header {
+  @apply flex items-center justify-between p-4 border-b border-gray-800;
+}
+
+.add-exercise-title {
+  @apply text-lg font-semibold text-white;
+}
+
+.add-exercise-close {
+  @apply p-1.5 text-gray-400 hover:bg-gray-800 rounded-full transition-colors;
+}
+
+.add-exercise-list {
+  @apply p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[calc(90vh-5rem)] overflow-y-auto;
+}
+
+.add-exercise-item {
+  @apply bg-gray-800 rounded-lg overflow-hidden cursor-pointer transition-transform hover:scale-[1.02] hover:shadow-lg;
+}
+
+.add-exercise-item-content {
+  @apply p-4 space-y-3;
+}
+
+.add-exercise-item-title {
+  @apply text-lg font-medium text-white mb-2;
+}
+
+.add-exercise-item-image {
+  @apply w-full h-40 object-contain bg-black rounded-md;
+}
+
+.add-exercise-item-description {
+  @apply text-sm text-gray-400;
+}
+
+.add-exercise-custom-btn {
+  @apply col-span-full flex items-center justify-center space-x-2 p-4 bg-gray-800 
+    text-indigo-400 rounded-lg hover:bg-gray-700 transition-colors mt-4;
+}
+
+.add-exercise-form {
+  @apply p-4 space-y-4 max-h-[calc(90vh-5rem)] overflow-y-auto;
+}
+
+.add-exercise-field {
+  @apply space-y-1;
+}
+
+.add-exercise-label {
+  @apply block text-sm font-medium text-gray-300;
+}
+
+.add-exercise-input {
+  @apply w-full px-4 py-2 bg-gray-800 border-0 text-white rounded-lg 
+    placeholder-gray-500 focus:ring-2 focus:ring-indigo-500;
+}
+
+.add-exercise-textarea {
+  @apply w-full px-4 py-2 bg-gray-800 border-0 text-white rounded-lg 
+    placeholder-gray-500 focus:ring-2 focus:ring-indigo-500 h-24 resize-none;
+}
+
+.add-exercise-actions {
+  @apply flex justify-end space-x-3 pt-4;
+}
+
+.add-exercise-cancel {
+  @apply px-4 py-2 text-gray-400 hover:bg-gray-800 rounded-lg transition-colors;
+}
+
+.add-exercise-submit {
+  @apply px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 
+    transition-colors flex items-center space-x-2;
+}

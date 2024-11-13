@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-blue-50 via-indigo-50 to-violet-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer utilities {
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+  
+  input, button {
+    @apply text-base;
+  }
+  
+  /* Increase touch targets for better mobile interaction */
+  button {
+    @apply min-h-[25px] min-w-[25px];
+  }
+}
