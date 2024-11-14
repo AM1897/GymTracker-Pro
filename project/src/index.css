@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-start: 249 250 251;
+  --background-end: 243 244 246;
+  --text-primary: 17 24 39;
+  --text-secondary: 107 114 128;
+}
+
+:root[class='dark'] {
+  --background-start: 15 23 42;
+  --background-end: 30 41 59;
+  --text-primary: 255 255 255;
+  --text-secondary: 156 163 175;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
