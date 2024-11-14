@@ -94,10 +94,10 @@ const Education = () => {
                   </p>
                 )}
               </div>
-              {edu.courses && edu.courses.length > 0 && (
+              {(edu.title === 'Java Developer Integration' || edu.title === 'Full Stack Developer') && (
                 <button
                   onClick={() => setSelectedEducation(edu)}
-                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white rounded-lg transition-colors whitespace-nowrap"
+                  className="px-6 py-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white rounded-lg transition-colors whitespace-nowrap self-start"
                 >
                   View Competencies
                 </button>
