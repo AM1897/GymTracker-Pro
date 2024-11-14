@@ -1,59 +1,51 @@
-# Professional Portfolio - Aram Mohammed
+# GymTracker Pro
 
-A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS, showcasing my journey as a Java Developer Integration and Full Stack Developer.
+A modern, responsive workout tracking application built with React and TypeScript. Track your workouts, manage exercises, and plan your training schedule with ease.
 
-![Portfolio Preview](https://media.licdn.com/dms/image/v2/D4E03AQGofL9KSt0JQw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1665403658923?e=1736985600&v=beta&t=dsiivQ6gG0f4zIyghIN22C5exfTgRmzkAAwZWT_r3Z8)
+![GymTracker Pro](https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&h=400&q=80)
 
-## 🚀 Features
+## Features
 
-- **Responsive Design**: Fully responsive layout that works on all devices
-- **Dark/Light Mode**: Theme toggle for better user experience
-- **Multi-language Support**: Available in English and Swedish
-- **Interactive UI**: Smooth transitions and modern interface
-- **Detailed Sections**:
-  - Professional Experience
-  - Educational Background
-  - Technical Skills
-  - Project Showcase
-  - Contact Information
+- 🏋️‍♂️ **Weekly Workout Schedule**
+  - Organize workouts by day and muscle groups
+  - Customizable workout splits
+  - Rest day management
 
-## 🛠️ Built With
+- 💪 **Exercise Management**
+  - Comprehensive exercise library
+  - Custom exercise creation
+  - Exercise details with GIF demonstrations
+  - Set and rep tracking
+  - Weight progression tracking
 
-- React 18
-- TypeScript
-- Tailwind CSS
-- Vite
-- React Router DOM
-- Lucide React Icons
+- 📱 **Responsive Design**
+  - Works seamlessly on desktop and mobile devices
+  - Dark/Light mode support
+  - Clean, modern interface
 
-## 🌟 Key Sections
+- 🌍 **Multi-language Support**
+  - English and Swedish languages
+  - Easy language switching
 
-### 📚 Education
-- Java Developer Integration (2023-2024)
-- Full Stack Developer (2021-2022)
-- Detailed course competencies and technologies
+- 📅 **Training Plan**
+  - Create and manage long-term training plans
+  - Week-by-week workout scheduling
+  - Progress tracking across weeks
 
-### 💼 Experience
-- Java Systems Integration Expert at DSVE AB
-- Full Stack Development internship at Vinnter AB
-- Comprehensive project experiences
+## Technology Stack
 
-### 🎯 Projects
-- GymTracker Pro
-- SmurfBooks Social Media Platform
-- GitHub Portfolio
+- **Frontend Framework**: React with TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **State Management**: React Context
+- **Routing**: React Router
+- **Build Tool**: Vite
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn
-
-### Installation
+## Getting Started
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone <repository-url>
 ```
 
 2. Install dependencies
@@ -66,26 +58,62 @@ npm install
 npm run dev
 ```
 
-4. Build for production
-```bash
-npm run build
+## Project Structure
+
+```
+src/
+├── components/         # React components
+├── context/           # React context providers
+├── data/             # Static data and translations
+├── styles/           # CSS styles
+├── types/            # TypeScript type definitions
+└── App.tsx           # Main application component
 ```
 
-## 📱 Contact
+### Key Components
 
-- LinkedIn: [Aram Mohammed](https://www.linkedin.com/in/aram-mohammed-51a5a821a/)
-- GitHub: [AM1897](https://github.com/AM1897)
-- Email: Aram10.1897@gmail.com
+- `WorkoutDays`: Main schedule view
+- `DayExercises`: Individual workout day view
+- `Exercise`: Exercise tracking component
+- `TrainingPlan`: Long-term planning view
+- `AddExercise`: Exercise creation modal
+- `CustomWorkout`: Custom workout builder
 
-## 📄 License
+### Context Providers
+
+- `WorkoutContext`: Manages workout data
+- `ThemeContext`: Handles dark/light mode
+- `LanguageContext`: Manages translations
+- `WeekContext`: Tracks training weeks
+
+## Features in Detail
+
+### Exercise Tracking
+- Track sets, reps, and weights
+- Mark sets as completed
+- View exercise demonstrations
+- Add notes and descriptions
+
+### Workout Planning
+- Customize weekly schedule
+- Create multiple training plans
+- Track progress across weeks
+- Add/remove exercises flexibly
+
+### User Interface
+- Intuitive navigation
+- Responsive design
+- Smooth animations
+- Accessible controls
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
-
-- Thanks to Campus Mölndal for excellent education
-- Special thanks to DSVE AB for professional opportunities
-- All my mentors and colleagues who have supported my journey
-
 ---
-© 2024 Aram Mohammed. All rights reserved.
+
+Built with ❤️ using React and TypeScript

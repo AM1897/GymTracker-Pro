@@ -1,45 +1,35 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
+import { WorkoutProvider } from './context/WorkoutContext';
+import { WeekProvider } from './context/WeekContext';
+import { LanguageProvider } from './context/LanguageContext';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Education from './pages/Education';
-import Experience from './pages/Experience';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+import WorkoutDays from './components/WorkoutDays';
+import DayExercises from './components/DayExercises';
+import CustomWorkout from './components/CustomWorkout';
+import TrainingPlan from './components/TrainingPlan';
 
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  
-  return null;
-};
-
-function App() {
+export default function App() {
   return (
-    <ThemeProvider>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-slate-900 dark:to-slate-800 text-gray-900 dark:text-white transition-colors duration-200 flex flex-col">
-          <Navbar />
-          <ScrollToTop />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/education" element={<Education />} />
-              <Route path="/experience" element={<Experience />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </ThemeProvider>
+    <LanguageProvider>
+      <ThemeProvider>
+        <WeekProvider>
+          <WorkoutProvider>
+            <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
+              <Navbar />
+              <main className="container mx-auto px-4 py-4 sm:py-6 lg:py-8 max-w-7xl">
+                <Routes>
+                  <Route path="/" element={<WorkoutDays />} />
+                  <Route path="/day/:day" element={<DayExercises />} />
+                  <Route path="/custom" element={<CustomWorkout />} />
+                  <Route path="/plan" element={<TrainingPlan />} />
+                </Routes>
+              </main>
+            </div>
+          </WorkoutProvider>
+        </WeekProvider>
+      </ThemeProvider>
+    </LanguageProvider>
   );
 }
-
-export default App;

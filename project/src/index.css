@@ -2,21 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background-start: 249 250 251;
-  --background-end: 243 244 246;
-  --text-primary: 17 24 39;
-  --text-secondary: 107 114 128;
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-blue-50 via-indigo-50 to-violet-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
 }
 
-:root[class='dark'] {
-  --background-start: 15 23 42;
-  --background-end: 30 41 59;
-  --text-primary: 255 255 255;
-  --text-secondary: 156 163 175;
+@layer utilities {
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
+/* Mobile-specific styles */
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+  
+  input, button {
+    @apply text-base;
+  }
+  
+  /* Increase touch targets for better mobile interaction */
+  button {
+    @apply min-h-[25px] min-w-[25px];
+  }
 }
